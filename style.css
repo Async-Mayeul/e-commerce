@@ -31,13 +31,12 @@ header {
     margin-right: 70px;
     margin-left: 20px;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: start;
     align-items: center;
 }
 
 #title {
-    display: none;
     font-size: 2.3em;
     font-weight: 700;
     color: hsla(0, 0%, 0%, .75);
@@ -57,28 +56,44 @@ header {
 }
 
 #btn-hamburger {
+    display: none;
+    text-decoration: none;
     font-size: 2rem;
     font-weight: 700;
     color: hsla(0, 0%, 0%, .75);
     cursor: pointer;
+    border: none;
+    background-color: hsl(25, 100%, 94%);
 }
 
-#menu-content {
+label {
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.menu-content {
     background-color: white;
     height: 100%;
     width: 60%;
-    visibility: hidden;
-    list-style-type: none;
     position: absolute;
     top: 0;
-    left: 0;
+    left: -250px;
     z-index: 2;
     padding: 25px;
+    transition: all .5s ease-in-out;
+}
+
+#close {
+    cursor: pointer;
 }
 
 .visible {
-    visibility: visible;
-    transition: visibility 0.5s linear 0s;
+    left: 0px;
+}
+
+#menu-list {
+    list-style-type: none;
 }
 
 .menu-item {
@@ -97,7 +112,7 @@ header {
     position: relative;
 }
 
-#basket-content {
+.basket-content {
     display: inline-block;
     text-align: center;
     width: 15px;
@@ -274,8 +289,75 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 #cart {
     margin-left: 8px;
+}
+
+#basket-preview {
+    visibility: visible;
+    position: absolute;
+    width: 95%;
+    height: 90%;
+    z-index: 2;
+    top: 5%;
+    left: 2.5%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#basket-preview-content {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    color: hsl(220, 14%, 75%);
+    font-weight: 700;
+}
+
+#title-basket-preview {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.089);
+    padding: 20px;
+}
+
+#item {
+    width: 20%;
+    border-radius: 10px;
+}
+
+#trash {
+    width: 5%;
+    height: 5%;
+}
+
+#checkout {
+    display: none;
+    background-color: hsl(26, 100%, 55%);
+    border: none;
+    border-radius: 10px;
+    width: 85%;
+    height: 20%;
+    margin-left: 8%;
+    margin-top: 5%;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 1em;
+}
+
+#empty-basket {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: bold;
+    color: hsl(220, 14%, 75%);
+    font-size: 1em;
+    height: 60%;
+}
+
+#empty-basket > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

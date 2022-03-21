@@ -17,31 +17,50 @@
 </head>
 <body>
   <header>
-    <h1 id="title">sneakers</h1>
     <nav id="menu">
-      <div id="btn-hamburger">
+      <input type="checkbox" id="btn-hamburger">
+      <label for="btn-hamburger">
         <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
           <path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" fill="#69707D" fill-rule="evenodd"/>
         </svg>
-        <span>sneakers</span>
-      </div>
+      </label>
+      </input>
+      <h1 id="title">sneakers</h1>
     </nav>
-    <ul id="menu-content">
+    <div class="menu-content">
+      <ul id="menu-list">
         <img id="close" src="./images/icon-close.svg" alt="close icon">
         <li class="menu-item">Collections</li>
         <li class="menu-item">Men</li>
         <li class="menu-item">Women</li>
         <li class="menu-item">About</li>
         <li class="menu-item">Contact</li>
-    </ul>
+      </ul>
+    </div>
+    
     <div id="shop">
-      <span id="basket-content">1</span>
+      <span class="basket-content">1</span>
     </div>
     <div id="user">
       <img id="user-profil" src="./images/image-avatar.png" alt="avatar user">
     </div>
   </header>
   <article id="sneaker-preview">
+    <div id="basket-preview">
+      <h3 id="title-basket-preview">Cart</h3>
+      <div id="basket-preview-content">
+        <img id="item" src="./images/image-product-1-thumbnail.jpg" alt="sneaker basket preview">
+        <div id="basket-preview-items">
+          <p id="basket-preview-name">Autmun Limited Edition...</p>
+          <p id="basket-preview-price">$125.00 x <span class="basket-content"></span> <span id="preview-final-price"></span></p>
+        </div>
+        <img id="trash" src="./images/icon-delete.svg" alt="delete">
+      </div>
+      <div id="empty-basket">
+        <p>Your cart is empty.</p>
+      </div>
+      <button id="checkout" type="button">Checkout</button>
+    </div>
     <div id="previous">
       <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
         <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
